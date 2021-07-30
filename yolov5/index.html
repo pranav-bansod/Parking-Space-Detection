@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Object Detection And Image Classfication</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url('static/uygar-kilic-yaIFQTqnnEw-unsplash (1).jpg');background-filter:blur(5px);">
+</body>
+
+<div class="container">
+  <h1 class="jumbotron bg-primary">Parking Space Detection</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data"  style="
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+  <div style="display:flex;justify-content: space-between;background-color: #eee;margin-top: 20px;padding: 10px;border-radius: 10px">
+      <img src="static/im2.jpg" style="width:46%" alt ="User Image">
+	    <img src="static/test/im2.jpg" style="width:46%" alt="Output Image" >
+  </div>
+  <divs  style="
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+">
+    <p>Done by</p>
+    <p>Pranav Bansod</p>
+  </div>
+	{% endif %}
+
+
+  
+    
+</div>
+
+</div>

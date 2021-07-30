@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Parking Space Detection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url('static/jeremy-bishop-uAfZBP-GtiA-unsplash (1).jpg');background-filter:blur(5px); background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+</body>
+
+<div class="container">
+  <h1 style="text-align:center; color: 	#fff;  background: rgba(238, 238, 238, 0.4); "; class="jumbotron bg-primary">PARKING SPACE DETECTION</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data"  style="
+   background: rgba(238, 238, 238, 0.3);
+
+  padding: 10px;
+  border-radius: 10px;
+">
+
+    <div class="form-group">
+      <label style="color:#fff" class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+<!--         <h4 style="text-align: left"> Empty Space: 38 Space Occupied: 4</h4>-->
+
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+  <div style="display:flex;justify-content: space-between;background: rgba(238, 238, 238, 0.5);;margin-top: 20px;padding: 10px;border-radius: 10px">
+      <img src="static/im2.jpg" style="width:46%" alt ="User Image">
+	    <img src="static/test/im2.jpg" style="width:46%" alt="Output Image" >
+  </div>
+
+  <divs  style="
+  color: 	#00000;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-stretch;
+">
+
+<!--    <div class="container">-->
+      <h3 style="text-align:center; background: linear-gradient(to bottom, #006600 0%, #000000 100%); color:#fff"; class="jumbotron bg-primary">Empty Space: {{ empty1 }} || Space Occupied: {{ occupied1 }}</h3>
+
+      <p style="text-align:center; color:#eee">Project by Pranav Bansod</p>
+      <br></br>
+  </div>
+	{% endif %}
+
+
+
+
+</div>
+
+</div>
